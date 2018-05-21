@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>login</ion-title>
+    <ion-title>Login</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -17,17 +17,21 @@
   <ion-list>
 
   <ion-item>
-    <ion-label fixed>Phone Number </ion-label>
-    <ion-input type="text" value=""></ion-input>
+    <ion-label fixed>Username </ion-label>
+    <ion-input [(ngModel)]="username" type="text"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label fixed>Password</ion-label>
-    <ion-input type="password"></ion-input>
+    <ion-input [(ngModel)]="password" type="password"></ion-input>
   </ion-item>
 
 </ion-list>
 
 <button ion-button block (click)="login()"> Login </button>
+
+<div *ngIf="this.username != this.usernameTest" id="errorUsername">
+   Le pseudo n'existe pas.
+</div>
 
 </ion-content>

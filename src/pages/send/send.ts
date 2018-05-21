@@ -10,7 +10,8 @@ import { Camera, CameraOptions, CameraPopoverOptions } from '@ionic-native/camer
 })
 export class SendPage {
 
-  imageURL
+  // imageURL
+  
 
   constructor(public navCtrl: NavController,private camera: Camera) {
 
@@ -32,12 +33,16 @@ export class SendPage {
     }
 
 
-    takePhoto(){
-      this.camera.getPicture(this.options).then((imageData) => {
-         this.imageURL = 'data:image/jpeg;base64,' + imageData;
-      }, (err) => {
-         console.log(err);
-      });
+    // takePhoto(){
+    //   this.camera.getPicture(this.options).then((imageData) => {
+    //      this.imageURL = 'data:image/jpeg;base64,' + imageData;
+    //   }, (err) => {
+    //      console.log(err);
+    //   });
+    // }
+
+    sendText() {
+
     }
 
 }
