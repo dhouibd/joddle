@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 //import {Camera} from '@ionic-native/camera';
 import { Camera, CameraOptions, CameraPopoverOptions } from '@ionic-native/camera';
+import { TextPage } from '../text/text';
 
 @Component({
   selector: 'page-send',
@@ -11,7 +12,8 @@ import { Camera, CameraOptions, CameraPopoverOptions } from '@ionic-native/camer
 export class SendPage {
 
   // imageURL
-  
+
+
 
   constructor(public navCtrl: NavController,private camera: Camera) {
 
@@ -41,8 +43,8 @@ export class SendPage {
     //   });
     // }
 
-    sendText() {
-
+    enterText() {
+      this.navCtrl.push(TextPage);
     }
 
 }

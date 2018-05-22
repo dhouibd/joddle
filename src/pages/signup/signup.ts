@@ -24,7 +24,7 @@ export class SignupPage {
   }
 
   signup(){
-  this.navCtrl.push(TabsPage);
-}
+    this.navCtrl.setRoot(TabsPage);
+  }
 
 }

@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
   <ion-navbar>
     <ion-title>
       Recevoir des messages
@@ -7,12 +7,12 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
+  <ion-list *ngIf="messages">
     <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
+      <ion-label *ngFor="let message of message" fixed>{{ message }}</ion-label>
     </ion-item>
-    
   </ion-list>
-</ion-content>
+
+  <button ion-button block (click)="majMessages()"> Mettre à jour </button>
+
+</ion-content> -->

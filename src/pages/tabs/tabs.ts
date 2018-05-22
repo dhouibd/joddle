@@ -5,6 +5,7 @@ import { ReceivePage } from '../receive/receive';
 import { HomePage } from '../home/home';
 
 @Component({
+  selector: 'tabs-text',
   templateUrl: 'tabs.html'
 })
 export class TabsPage {

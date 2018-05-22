@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Envoyer des Messages
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+  <ion-content padding>
+    <ion-list>
+
+      <ion-item>
+        <ion-label fixed>Your message..</ion-label>
+        <ion-input [(ngModel)]="texte" type="text"></ion-input>
+      </ion-item>
+    </ion-list>
+
+  <button ion-button block (click)="sendText()"> Envoyer </button>
+  <!-- <button ion-button block (click)="sendText()"> Envoyer </button> -->
+  </ion-content>
