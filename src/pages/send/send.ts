@@ -1,22 +1,25 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, MenuController, AlertController } from 'ionic-angular';
 //import {Camera} from '@ionic-native/camera';
 import { Camera, CameraOptions, CameraPopoverOptions } from '@ionic-native/camera';
 import { TextPage } from '../text/text';
+import { Contacts, Contact, ContactField, ContactName } from '@ionic-native/contacts';
+
 
 @Component({
   selector: 'page-send',
-  providers: [Camera],
+  providers: [Camera,Storage],
   templateUrl: 'send.html'
 })
 export class SendPage {
 
   // imageURL
+  public contactsFound: any;
+  public search: any;
 
 
-
-  constructor(public navCtrl: NavController,private camera: Camera) {
-
+  constructor(public navCtrl: NavController, private camera: Camera, private contacts: Contacts) {
+    this.contactsFound = [];
   }
 
     options: CameraOptions = {
@@ -45,6 +48,13 @@ export class SendPage {
 
     enterText() {
       this.navCtrl.push(TextPage);
+    }
+
+    importContact() {
+      Contacts.find(['*'], {filter: "",multiple:true})
+      .then((contacts) => {
+              this.contactsFound = contacts;
+            });
     }
 
 }

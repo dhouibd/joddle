@@ -12,5 +12,16 @@
   <button ion-button block > Vidéo </button>
   <button ion-button block > Son </button>
   <button ion-button block (click)="enterText()"> Texte </button>
+  <button ion-button block (click)="importContact()"> Importer </button>
+
+  <ion-list *ngIf="allContacts">
+    <ion-item *ngFor="#item of contactsfound">
+            {{item.name.givenName}} {{item.name.familyName}}
+          </ion-item>
+          <ion-item *ngIf="contactsfound.length == 0">
+            Aucun ne résultat ne correcpond à cette recherche
+          </ion-item>
+  </ion-list>
+
 
 </ion-content>

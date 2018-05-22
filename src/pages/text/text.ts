@@ -12,11 +12,11 @@ const DATABASE_FILE_NAME: string = 'data.db';
 })
 export class TextPage {
 
-  private db: SQLiteObject;
-  private latitude: double;
-  private longitude: double;
-  private pseudo: string;
-  private message: string;
+  // private db: SQLiteObject;
+  // private latitude: double;
+  // private longitude: double;
+  // private pseudo: string;
+  // private message: string;
 
   constructor(public navCtrl: NavController) {
 
@@ -46,7 +46,6 @@ export class TextPage {
   sendText() {
     // Récupérer les coordonnees géographiques
     // Faire une alerte pour dire que le message s'est bien envoyé
-    this.navCtrl.pop(SendPage);
     this.navCtrl.push(ReceivePage);
   }
 
